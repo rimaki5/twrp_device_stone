@@ -5,7 +5,9 @@
 # mount point          fstype  device                                        device2              flags
 /metadata              ext4    /dev/block/bootdevice/by-name/metadata                             flags=display="Metadata";backup=1
 /cache                 ext4    /dev/block/bootdevice/by-name/rescue                               flags=backup=1;wipeingui;wipeduringfactoryreset
-/cust                  ext4    /dev/block/bootdevice/by-name/cust                                 flags=display="Cust";backup=1;flashimg=1
+/frp                   ext4    /dev/block/bootdevice/by-name/frp                                  flags=backup=0;wipeingui;wipeduringfactoryreset
+/cust                  ext4    /dev/block/bootdevice/by-name/cust                                 flags=display="Cust";backup=1;flashimg=0;wipeingui
+/cust_emmc             emmc    /dev/block/bootdevice/by-name/cust                                 flags=display="Cust emmc";flashimg=1
 
 # Boot
 /boot                  emmc    /dev/block/bootdevice/by-name/boot                                 flags=backup=1;slotselect;flashimg=1
